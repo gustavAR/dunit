@@ -2,3 +2,4 @@ main
 exampleTests
 *.o
 *.swp
+dunit.lib

@@ -12,6 +12,12 @@
             "sourcePaths": ["dunit"]
         },
         {
+            "name": "library64",
+            "targetType": "library",
+            "sourcePaths": ["dunit"],
+            "dflags": ["-m64"]
+        },
+        {
             "name": "example",
             "targetType": "executable",
             "sourceFiles": ["example.d"],
