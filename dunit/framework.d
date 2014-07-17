@@ -44,7 +44,15 @@ mixin template Main()
 {
     int main (string[] args)
     {
-        return dunit_main(args);
+        import std.stdio;
+        int rval;
+        try {
+            rval = dunit_main(args);
+        } catch (Throwable t) {
+            writeln(t);
+        }
+        readln;
+        return rval;
     }
 }
 
