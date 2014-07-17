@@ -450,3 +450,29 @@ unittest
     assertEquals("timed out",
             collectExceptionMsg!AssertException(assertEventually({ return false; })));
 }
+
+/**
+*   Asserts that the template function will return true when called with params
+ * Throws: AssertException otherwise
+*/
+public void assertFun(alias fun, string msg = null, string file = __FILE__,
+                      size_t line = __LINE__, T...)(T args)
+{
+    if(fun(args))
+        return;
+
+    fail(text(msg,"Predicate ",__traits(identifier, fun)," returned false with args: ",argsString(args)), file, line);
+}
+
+private string argsString(T...)(T args)
+{
+    string s = "(";
+    foreach(arg; args) {
+        s ~= to!string(arg) ~ ", ";
+        
+    }
+    s.length -= ", ".length;
+    s ~= ")";
+
+    return s;
+}
