@@ -741,3 +741,6 @@ example (example.d) : private : std.range (C:\\D\\dmd2\\windows\\bin\\..\\..\\sr
 example (example.d) : private : std.range (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\range.d)
 example (example.d) : private : std.range (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\range.d)
 example (example.d) : private : std.range (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\range.d)
+example (example.d) : private : std.stdio (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\stdio.d)
+example (example.d) : private : std.format (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\format.d):formattedWrite
+example (example.d) : private : std.exception (C:\\D\\dmd2\\windows\\bin\\..\\..\\src\\phobos\\std\\exception.d):enforce

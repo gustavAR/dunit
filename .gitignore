@@ -1,5 +1,3 @@
-main
-exampleTests
-*.o
-*.swp
-dunit.lib
+# Directories
+Debug/
+Release/
