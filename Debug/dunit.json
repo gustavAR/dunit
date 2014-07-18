@@ -1,0 +1,2986 @@
+[
+ {
+  "name" : "dunit.assertion",
+  "kind" : "module",
+  "file" : "dunit\\assertion.d",
+  "members" : [
+   {
+    "name" : "dunit.diff",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "core.thread",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "core.time",
+    "kind" : "import",
+    "line" : 12,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.algorithm",
+    "kind" : "import",
+    "line" : 13,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.array",
+    "kind" : "import",
+    "line" : 14,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.conv",
+    "kind" : "import",
+    "line" : 15,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.string",
+    "kind" : "import",
+    "line" : 16,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.traits",
+    "kind" : "import",
+    "line" : 17,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "AssertException",
+    "kind" : "class",
+    "line" : 24,
+    "char" : 1,
+    "base" : "Exception",
+    "members" : [
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 26,
+      "char" : 5,
+      "deco" : "FAyaAyakZC5dunit9assertion15AssertException",
+      "originalType" : "(string msg = null, string file = __FILE__, size_t line = __LINE__)",
+      "parameters" : [
+       {
+        "name" : "msg",
+        "deco" : "Aya",
+        "default" : "null"
+       },
+       {
+        "name" : "file",
+        "deco" : "Aya",
+        "default" : "__FILE__"
+       },
+       {
+        "name" : "line",
+        "deco" : "k",
+        "default" : "cast(uint)__LINE__"
+       }
+      ],
+      "endline" : 31,
+      "endchar" : 5
+     }
+    ]
+   },
+   {
+    "name" : "assertTrue",
+    "kind" : "function",
+    "line" : 38,
+    "char" : 6,
+    "deco" : "FbLAyaAyakZv",
+    "originalType" : "void(bool condition, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+    "parameters" : [
+     {
+      "name" : "condition",
+      "deco" : "b"
+     },
+     {
+      "name" : "msg",
+      "deco" : "Aya",
+      "storageClass" : [
+       "lazy"
+      ],
+      "default" : "null"
+     },
+     {
+      "name" : "file",
+      "deco" : "Aya",
+      "default" : "__FILE__"
+     },
+     {
+      "name" : "line",
+      "deco" : "k",
+      "default" : "cast(uint)__LINE__"
+     }
+    ],
+    "endline" : 46,
+    "endchar" : 1
+   },
+   {
+    "name" : "__unittestL49_1",
+    "kind" : "function",
+    "line" : 49,
+    "char" : 1,
+    "endline" : 60,
+    "endchar" : 1
+   },
+   {
+    "name" : "assertFalse",
+    "kind" : "function",
+    "line" : 60,
+    "char" : 6,
+    "deco" : "FbLAyaAyakZv",
+    "originalType" : "void(bool condition, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+    "parameters" : [
+     {
+      "name" : "condition",
+      "deco" : "b"
+     },
+     {
+      "name" : "msg",
+      "deco" : "Aya",
+      "storageClass" : [
+       "lazy"
+      ],
+      "default" : "null"
+     },
+     {
+      "name" : "file",
+      "deco" : "Aya",
+      "default" : "__FILE__"
+     },
+     {
+      "name" : "line",
+      "deco" : "k",
+      "default" : "cast(uint)__LINE__"
+     }
+    ],
+    "endline" : 68,
+    "endchar" : 1
+   },
+   {
+    "name" : "__unittestL71_2",
+    "kind" : "function",
+    "line" : 71,
+    "char" : 1,
+    "endline" : 82,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 82,
+    "char" : 6,
+    "name" : "assertEquals",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "U",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "assertEquals",
+      "kind" : "function",
+      "line" : 82,
+      "char" : 6,
+      "type" : "void(T expected, U actual, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+      "parameters" : [
+       {
+        "name" : "expected",
+        "type" : "T"
+       },
+       {
+        "name" : "actual",
+        "type" : "U"
+       },
+       {
+        "name" : "msg",
+        "type" : "string",
+        "storageClass" : [
+         "lazy"
+        ],
+        "default" : "null"
+       },
+       {
+        "name" : "file",
+        "type" : "string",
+        "default" : "__FILE__"
+       },
+       {
+        "name" : "line",
+        "type" : "size_t",
+        "default" : "__LINE__"
+       }
+      ],
+      "endline" : 94,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL97_3",
+    "kind" : "function",
+    "line" : 97,
+    "char" : 1,
+    "endline" : 108,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 108,
+    "char" : 6,
+    "name" : "assertEquals",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "U",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "assertEquals",
+      "kind" : "function",
+      "line" : 108,
+      "char" : 6,
+      "type" : "void(T expected, U actual, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+      "parameters" : [
+       {
+        "name" : "expected",
+        "type" : "T"
+       },
+       {
+        "name" : "actual",
+        "type" : "U"
+       },
+       {
+        "name" : "msg",
+        "type" : "string",
+        "storageClass" : [
+         "lazy"
+        ],
+        "default" : "null"
+       },
+       {
+        "name" : "file",
+        "type" : "string",
+        "default" : "__FILE__"
+       },
+       {
+        "name" : "line",
+        "type" : "size_t",
+        "default" : "__LINE__"
+       }
+      ],
+      "endline" : 120,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL123_4",
+    "kind" : "function",
+    "line" : 123,
+    "char" : 1,
+    "endline" : 144,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 144,
+    "char" : 6,
+    "name" : "assertArrayEquals",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "U",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "assertArrayEquals",
+      "kind" : "function",
+      "line" : 144,
+      "char" : 6,
+      "type" : "void(T[] expected, U[] actual, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+      "parameters" : [
+       {
+        "name" : "expected",
+        "type" : "T[]"
+       },
+       {
+        "name" : "actual",
+        "type" : "U[]"
+       },
+       {
+        "name" : "msg",
+        "type" : "string",
+        "storageClass" : [
+         "lazy"
+        ],
+        "default" : "null"
+       },
+       {
+        "name" : "file",
+        "type" : "string",
+        "default" : "__FILE__"
+       },
+       {
+        "name" : "line",
+        "type" : "size_t",
+        "default" : "__LINE__"
+       }
+      ],
+      "endline" : 159,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL162_5",
+    "kind" : "function",
+    "line" : 162,
+    "char" : 1,
+    "endline" : 179,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 179,
+    "char" : 6,
+    "name" : "assertArrayEquals",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "U",
+      "kind" : "type"
+     },
+     {
+      "name" : "V",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "assertArrayEquals",
+      "kind" : "function",
+      "line" : 179,
+      "char" : 6,
+      "type" : "void(T[V] expected, U[V] actual, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+      "parameters" : [
+       {
+        "name" : "expected",
+        "type" : "T[V]"
+       },
+       {
+        "name" : "actual",
+        "type" : "U[V]"
+       },
+       {
+        "name" : "msg",
+        "type" : "string",
+        "storageClass" : [
+         "lazy"
+        ],
+        "default" : "null"
+       },
+       {
+        "name" : "file",
+        "type" : "string",
+        "default" : "__FILE__"
+       },
+       {
+        "name" : "line",
+        "type" : "size_t",
+        "default" : "__LINE__"
+       }
+      ],
+      "endline" : 198,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL201_6",
+    "kind" : "function",
+    "line" : 201,
+    "char" : 1,
+    "endline" : 216,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 216,
+    "char" : 6,
+    "name" : "assertEmpty",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "assertEmpty",
+      "kind" : "function",
+      "line" : 216,
+      "char" : 6,
+      "type" : "void(T actual, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+      "parameters" : [
+       {
+        "name" : "actual",
+        "type" : "T"
+       },
+       {
+        "name" : "msg",
+        "type" : "string",
+        "storageClass" : [
+         "lazy"
+        ],
+        "default" : "null"
+       },
+       {
+        "name" : "file",
+        "type" : "string",
+        "default" : "__FILE__"
+       },
+       {
+        "name" : "line",
+        "type" : "size_t",
+        "default" : "__LINE__"
+       }
+      ],
+      "endline" : 224,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL227_7",
+    "kind" : "function",
+    "line" : 227,
+    "char" : 1,
+    "endline" : 238,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 238,
+    "char" : 6,
+    "name" : "assertNotEmpty",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "assertNotEmpty",
+      "kind" : "function",
+      "line" : 238,
+      "char" : 6,
+      "type" : "void(T actual, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+      "parameters" : [
+       {
+        "name" : "actual",
+        "type" : "T"
+       },
+       {
+        "name" : "msg",
+        "type" : "string",
+        "storageClass" : [
+         "lazy"
+        ],
+        "default" : "null"
+       },
+       {
+        "name" : "file",
+        "type" : "string",
+        "default" : "__FILE__"
+       },
+       {
+        "name" : "line",
+        "type" : "size_t",
+        "default" : "__LINE__"
+       }
+      ],
+      "endline" : 246,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL249_8",
+    "kind" : "function",
+    "line" : 249,
+    "char" : 1,
+    "endline" : 260,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 260,
+    "char" : 6,
+    "name" : "assertNull",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "assertNull",
+      "kind" : "function",
+      "line" : 260,
+      "char" : 6,
+      "type" : "void(T actual, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+      "parameters" : [
+       {
+        "name" : "actual",
+        "type" : "T"
+       },
+       {
+        "name" : "msg",
+        "type" : "string",
+        "storageClass" : [
+         "lazy"
+        ],
+        "default" : "null"
+       },
+       {
+        "name" : "file",
+        "type" : "string",
+        "default" : "__FILE__"
+       },
+       {
+        "name" : "line",
+        "type" : "size_t",
+        "default" : "__LINE__"
+       }
+      ],
+      "endline" : 268,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL271_9",
+    "kind" : "function",
+    "line" : 271,
+    "char" : 1,
+    "endline" : 284,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 284,
+    "char" : 6,
+    "name" : "assertNotNull",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "assertNotNull",
+      "kind" : "function",
+      "line" : 284,
+      "char" : 6,
+      "type" : "void(T actual, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+      "parameters" : [
+       {
+        "name" : "actual",
+        "type" : "T"
+       },
+       {
+        "name" : "msg",
+        "type" : "string",
+        "storageClass" : [
+         "lazy"
+        ],
+        "default" : "null"
+       },
+       {
+        "name" : "file",
+        "type" : "string",
+        "default" : "__FILE__"
+       },
+       {
+        "name" : "line",
+        "type" : "size_t",
+        "default" : "__LINE__"
+       }
+      ],
+      "endline" : 292,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL295_10",
+    "kind" : "function",
+    "line" : 295,
+    "char" : 1,
+    "endline" : 308,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 308,
+    "char" : 6,
+    "name" : "assertSame",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "U",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "assertSame",
+      "kind" : "function",
+      "line" : 308,
+      "char" : 6,
+      "type" : "void(T expected, U actual, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+      "parameters" : [
+       {
+        "name" : "expected",
+        "type" : "T"
+       },
+       {
+        "name" : "actual",
+        "type" : "U"
+       },
+       {
+        "name" : "msg",
+        "type" : "string",
+        "storageClass" : [
+         "lazy"
+        ],
+        "default" : "null"
+       },
+       {
+        "name" : "file",
+        "type" : "string",
+        "default" : "__FILE__"
+       },
+       {
+        "name" : "line",
+        "type" : "size_t",
+        "default" : "__LINE__"
+       }
+      ],
+      "endline" : 319,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL322_11",
+    "kind" : "function",
+    "line" : 322,
+    "char" : 1,
+    "endline" : 336,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 336,
+    "char" : 6,
+    "name" : "assertNotSame",
+    "parameters" : [
+     {
+      "name" : "T",
+      "kind" : "type"
+     },
+     {
+      "name" : "U",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "assertNotSame",
+      "kind" : "function",
+      "line" : 336,
+      "char" : 6,
+      "type" : "void(T expected, U actual, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+      "parameters" : [
+       {
+        "name" : "expected",
+        "type" : "T"
+       },
+       {
+        "name" : "actual",
+        "type" : "U"
+       },
+       {
+        "name" : "msg",
+        "type" : "string",
+        "storageClass" : [
+         "lazy"
+        ],
+        "default" : "null"
+       },
+       {
+        "name" : "file",
+        "type" : "string",
+        "default" : "__FILE__"
+       },
+       {
+        "name" : "line",
+        "type" : "size_t",
+        "default" : "__LINE__"
+       }
+      ],
+      "endline" : 347,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL350_12",
+    "kind" : "function",
+    "line" : 350,
+    "char" : 1,
+    "endline" : 364,
+    "endchar" : 1
+   },
+   {
+    "name" : "fail",
+    "kind" : "function",
+    "line" : 364,
+    "char" : 6,
+    "deco" : "FAyaAyakZv",
+    "originalType" : "void(string msg = null, string file = __FILE__, size_t line = __LINE__)",
+    "parameters" : [
+     {
+      "name" : "msg",
+      "deco" : "Aya",
+      "default" : "null"
+     },
+     {
+      "name" : "file",
+      "deco" : "Aya",
+      "default" : "__FILE__"
+     },
+     {
+      "name" : "line",
+      "deco" : "k",
+      "default" : "cast(uint)__LINE__"
+     }
+    ],
+    "endline" : 369,
+    "endchar" : 1
+   },
+   {
+    "name" : "__unittestL372_13",
+    "kind" : "function",
+    "line" : 372,
+    "char" : 1,
+    "endline" : 378,
+    "endchar" : 1
+   },
+   {
+    "name" : "assertGreaterThan",
+    "kind" : "alias",
+    "line" : 378,
+    "char" : 20
+   },
+   {
+    "name" : "assertGreaterThanOrEqual",
+    "kind" : "alias",
+    "line" : 379,
+    "char" : 21
+   },
+   {
+    "name" : "assertLessThan",
+    "kind" : "alias",
+    "line" : 380,
+    "char" : 20
+   },
+   {
+    "name" : "assertLessThanOrEqual",
+    "kind" : "alias",
+    "line" : 381,
+    "char" : 21
+   },
+   {
+    "kind" : "template",
+    "line" : 388,
+    "char" : 1,
+    "name" : "assertOp",
+    "parameters" : [
+     {
+      "name" : "op",
+      "kind" : "value",
+      "deco" : "Aya"
+     }
+    ],
+    "members" : [
+     {
+      "kind" : "template",
+      "line" : 390,
+      "char" : 10,
+      "name" : "assertOp",
+      "parameters" : [
+       {
+        "name" : "T",
+        "kind" : "type"
+       },
+       {
+        "name" : "U",
+        "kind" : "type"
+       }
+      ],
+      "members" : [
+       {
+        "name" : "assertOp",
+        "kind" : "function",
+        "line" : 390,
+        "char" : 10,
+        "type" : "void(T lhs, U rhs, lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+        "parameters" : [
+         {
+          "name" : "lhs",
+          "type" : "T"
+         },
+         {
+          "name" : "rhs",
+          "type" : "U"
+         },
+         {
+          "name" : "msg",
+          "type" : "string",
+          "storageClass" : [
+           "lazy"
+          ],
+          "default" : "null"
+         },
+         {
+          "name" : "file",
+          "type" : "string",
+          "default" : "__FILE__"
+         },
+         {
+          "name" : "line",
+          "type" : "size_t",
+          "default" : "__LINE__"
+         }
+        ],
+        "endline" : 400,
+        "endchar" : 5
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL404_14",
+    "kind" : "function",
+    "line" : 404,
+    "char" : 1,
+    "endline" : 426,
+    "endchar" : 1
+   },
+   {
+    "name" : "assertEventually",
+    "kind" : "function",
+    "line" : 426,
+    "char" : 20,
+    "storageClass" : [
+     "static"
+    ],
+    "deco" : "FDFZbS4core4time8DurationS4core4time8DurationLAyaAyakZv",
+    "originalType" : "void(bool delegate() probe, Duration timeout = msecs(500), Duration delay = msecs(10), lazy string msg = null, string file = __FILE__, size_t line = __LINE__)",
+    "parameters" : [
+     {
+      "name" : "probe",
+      "deco" : "DFZb"
+     },
+     {
+      "name" : "timeout",
+      "deco" : "S4core4time8Duration",
+      "default" : "dur(500L)"
+     },
+     {
+      "name" : "delay",
+      "deco" : "S4core4time8Duration",
+      "default" : "dur(10L)"
+     },
+     {
+      "name" : "msg",
+      "deco" : "Aya",
+      "storageClass" : [
+       "lazy"
+      ],
+      "default" : "null"
+     },
+     {
+      "name" : "file",
+      "deco" : "Aya",
+      "default" : "__FILE__"
+     },
+     {
+      "name" : "line",
+      "deco" : "k",
+      "default" : "cast(uint)__LINE__"
+     }
+    ],
+    "endline" : 443,
+    "endchar" : 1
+   },
+   {
+    "name" : "__unittestL446_15",
+    "kind" : "function",
+    "line" : 446,
+    "char" : 1,
+    "endline" : 453,
+    "endchar" : 1
+   }
+  ]
+ },
+ {
+  "name" : "dunit.attributes",
+  "kind" : "module",
+  "file" : "dunit\\attributes.d",
+  "members" : [
+   {
+    "name" : "After",
+    "kind" : "enum",
+    "line" : 3,
+    "char" : 1
+   },
+   {
+    "name" : "AfterClass",
+    "kind" : "enum",
+    "line" : 4,
+    "char" : 1
+   },
+   {
+    "name" : "Before",
+    "kind" : "enum",
+    "line" : 5,
+    "char" : 1
+   },
+   {
+    "name" : "BeforeClass",
+    "kind" : "enum",
+    "line" : 6,
+    "char" : 1
+   },
+   {
+    "name" : "Test",
+    "kind" : "enum",
+    "line" : 7,
+    "char" : 1
+   },
+   {
+    "name" : "Ignore",
+    "kind" : "struct",
+    "line" : 9,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "reason",
+      "kind" : "variable",
+      "line" : 11,
+      "char" : 12,
+      "deco" : "Aya",
+      "offset" : 0
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "dunit.color",
+  "kind" : "module",
+  "file" : "dunit\\color.d",
+  "members" : [
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Color",
+    "kind" : "enum",
+    "line" : 10,
+    "char" : 1,
+    "baseDeco" : "i",
+    "members" : [
+     {
+      "name" : "red",
+      "kind" : "enum member",
+      "value" : "0",
+      "line" : 10,
+      "char" : 14
+     },
+     {
+      "name" : "green",
+      "kind" : "enum member",
+      "value" : "1",
+      "line" : 10,
+      "char" : 19
+     },
+     {
+      "name" : "yellow",
+      "kind" : "enum member",
+      "value" : "2",
+      "line" : 10,
+      "char" : 26
+     },
+     {
+      "name" : "onRed",
+      "kind" : "enum member",
+      "value" : "3",
+      "line" : 10,
+      "char" : 34
+     },
+     {
+      "name" : "onGreen",
+      "kind" : "enum member",
+      "value" : "4",
+      "line" : 10,
+      "char" : 41
+     },
+     {
+      "name" : "onYellow",
+      "kind" : "enum member",
+      "value" : "5",
+      "line" : 10,
+      "char" : 50
+     }
+    ]
+   },
+   {
+    "name" : "writec",
+    "kind" : "function",
+    "line" : 71,
+    "char" : 17,
+    "deco" : "FE5dunit5color5ColorAyaZv",
+    "parameters" : [
+     {
+      "name" : "color",
+      "deco" : "E5dunit5color5Color"
+     },
+     {
+      "name" : "text",
+      "deco" : "Aya"
+     }
+    ],
+    "endline" : 117,
+    "endchar" : 5
+   },
+   {
+    "name" : "canUseColor",
+    "kind" : "function",
+    "protection" : "private",
+    "line" : 119,
+    "char" : 25,
+    "storageClass" : [
+     "static"
+    ],
+    "deco" : "FZb",
+    "endline" : 135,
+    "endchar" : 5
+   }
+  ]
+ },
+ {
+  "name" : "dunit.diff",
+  "kind" : "module",
+  "file" : "dunit\\diff.d",
+  "members" : [
+   {
+    "name" : "std.algorithm",
+    "kind" : "import",
+    "line" : 8,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.range",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.typecons",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "description",
+    "kind" : "function",
+    "line" : 15,
+    "char" : 8,
+    "deco" : "FAyaAyaZAya",
+    "parameters" : [
+     {
+      "name" : "expected",
+      "deco" : "Aya"
+     },
+     {
+      "name" : "actual",
+      "deco" : "Aya"
+     }
+    ],
+    "endline" : 27,
+    "endchar" : 1
+   },
+   {
+    "name" : "__unittestL30_16",
+    "kind" : "function",
+    "line" : 30,
+    "char" : 1,
+    "endline" : 39,
+    "endchar" : 1
+   },
+   {
+    "kind" : "template",
+    "line" : 39,
+    "char" : 24,
+    "name" : "diff",
+    "parameters" : [
+     {
+      "name" : "string",
+      "kind" : "type"
+     }
+    ],
+    "members" : [
+     {
+      "name" : "diff",
+      "kind" : "function",
+      "line" : 39,
+      "char" : 24,
+      "type" : "Tuple!(string, string)(string lhs, string rhs)",
+      "parameters" : [
+       {
+        "name" : "lhs",
+        "type" : "string"
+       },
+       {
+        "name" : "rhs",
+        "type" : "string"
+       }
+      ],
+      "endline" : 60,
+      "endchar" : 1
+     }
+    ]
+   },
+   {
+    "name" : "__unittestL63_17",
+    "kind" : "function",
+    "line" : 63,
+    "char" : 1,
+    "endline" : 78,
+    "endchar" : 1
+   }
+  ]
+ },
+ {
+  "name" : "dunit.framework",
+  "kind" : "module",
+  "file" : "dunit\\framework.d",
+  "members" : [
+   {
+    "name" : "dunit.assertion",
+    "kind" : "import",
+    "line" : 9,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "dunit.attributes",
+    "kind" : "import",
+    "line" : 10,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "dunit.color",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "core.time",
+    "kind" : "import",
+    "line" : 13,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.algorithm",
+    "kind" : "import",
+    "line" : 14,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.array",
+    "kind" : "import",
+    "line" : 15,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.conv",
+    "kind" : "import",
+    "line" : 16,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 17,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.string",
+    "kind" : "import",
+    "line" : 18,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.typetuple",
+    "kind" : "import",
+    "line" : 19,
+    "char" : 15
+   },
+   {
+    "name" : "TestClass",
+    "kind" : "struct",
+    "line" : 21,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "tests",
+      "kind" : "variable",
+      "line" : 23,
+      "char" : 14,
+      "deco" : "AAya",
+      "offset" : 0
+     },
+     {
+      "name" : "ignoredTests",
+      "kind" : "variable",
+      "line" : 24,
+      "char" : 20,
+      "deco" : "HAyaAya",
+      "offset" : 8
+     },
+     {
+      "name" : "create",
+      "kind" : "variable",
+      "line" : 26,
+      "char" : 23,
+      "deco" : "PFZC6Object",
+      "offset" : 12
+     },
+     {
+      "name" : "beforeClass",
+      "kind" : "variable",
+      "line" : 27,
+      "char" : 29,
+      "deco" : "PFC6ObjectZv",
+      "offset" : 16
+     },
+     {
+      "name" : "before",
+      "kind" : "variable",
+      "line" : 28,
+      "char" : 29,
+      "deco" : "PFC6ObjectZv",
+      "offset" : 20
+     },
+     {
+      "name" : "test",
+      "kind" : "variable",
+      "line" : 29,
+      "char" : 46,
+      "deco" : "PFC6ObjectAyaZv",
+      "offset" : 24
+     },
+     {
+      "name" : "after",
+      "kind" : "variable",
+      "line" : 30,
+      "char" : 29,
+      "deco" : "PFC6ObjectZv",
+      "offset" : 28
+     },
+     {
+      "name" : "afterClass",
+      "kind" : "variable",
+      "line" : 31,
+      "char" : 29,
+      "deco" : "PFC6ObjectZv",
+      "offset" : 32
+     }
+    ]
+   },
+   {
+    "name" : "testClassOrder",
+    "kind" : "variable",
+    "line" : 34,
+    "char" : 10,
+    "deco" : "AAya"
+   },
+   {
+    "name" : "testClasses",
+    "kind" : "variable",
+    "line" : 35,
+    "char" : 19,
+    "deco" : "HAyaS5dunit9framework9TestClass"
+   },
+   {
+    "name" : "TestSelection",
+    "kind" : "struct",
+    "line" : 37,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "className",
+      "kind" : "variable",
+      "line" : 39,
+      "char" : 12,
+      "deco" : "Aya",
+      "offset" : 0
+     },
+     {
+      "name" : "testNames",
+      "kind" : "variable",
+      "line" : 40,
+      "char" : 14,
+      "deco" : "AAya",
+      "offset" : 8
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 43,
+    "char" : 7,
+    "name" : "Main",
+    "parameters" : [],
+    "members" : [
+     {
+      "name" : "main",
+      "kind" : "function",
+      "line" : 45,
+      "char" : 9,
+      "type" : "int(string[] args)",
+      "parameters" : [
+       {
+        "name" : "args",
+        "type" : "string[]"
+       }
+      ],
+      "endline" : 48,
+      "endchar" : 5
+     }
+    ]
+   },
+   {
+    "name" : "dunit_main",
+    "kind" : "function",
+    "line" : 51,
+    "char" : 12,
+    "deco" : "FAAyaZi",
+    "parameters" : [
+     {
+      "name" : "args",
+      "deco" : "AAya"
+     }
+    ],
+    "endline" : 163,
+    "endchar" : 1
+   },
+   {
+    "name" : "runTests",
+    "kind" : "function",
+    "line" : 165,
+    "char" : 20,
+    "storageClass" : [
+     "static"
+    ],
+    "deco" : "FAS5dunit9framework13TestSelectionAC5dunit9framework12TestListenerZv",
+    "parameters" : [
+     {
+      "name" : "testSelections",
+      "deco" : "AS5dunit9framework13TestSelection"
+     },
+     {
+      "name" : "testListeners",
+      "deco" : "AC5dunit9framework12TestListener"
+     }
+    ],
+    "endline" : 261,
+    "endchar" : 1
+   },
+   {
+    "name" : "TestListener",
+    "kind" : "interface",
+    "line" : 263,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "enterClass",
+      "kind" : "function",
+      "line" : 265,
+      "char" : 17,
+      "storageClass" : [
+       "abstract"
+      ],
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "className",
+        "deco" : "Aya"
+       }
+      ]
+     },
+     {
+      "name" : "enterTest",
+      "kind" : "function",
+      "line" : 266,
+      "char" : 17,
+      "storageClass" : [
+       "abstract"
+      ],
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "testName",
+        "deco" : "Aya"
+       }
+      ]
+     },
+     {
+      "name" : "skip",
+      "kind" : "function",
+      "line" : 267,
+      "char" : 17,
+      "storageClass" : [
+       "abstract"
+      ],
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "reason",
+        "deco" : "Aya"
+       }
+      ]
+     },
+     {
+      "name" : "addFailure",
+      "kind" : "function",
+      "line" : 268,
+      "char" : 17,
+      "storageClass" : [
+       "abstract"
+      ],
+      "deco" : "FAyaC5dunit9assertion15AssertExceptionZv",
+      "parameters" : [
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "exception",
+        "deco" : "C5dunit9assertion15AssertException"
+       }
+      ]
+     },
+     {
+      "name" : "addError",
+      "kind" : "function",
+      "line" : 269,
+      "char" : 17,
+      "storageClass" : [
+       "abstract"
+      ],
+      "deco" : "FAyaC6object9ThrowableZv",
+      "parameters" : [
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "throwable",
+        "deco" : "C6object9Throwable"
+       }
+      ]
+     },
+     {
+      "name" : "exitTest",
+      "kind" : "function",
+      "line" : 270,
+      "char" : 17,
+      "storageClass" : [
+       "abstract"
+      ],
+      "deco" : "FbZv",
+      "parameters" : [
+       {
+        "name" : "success",
+        "deco" : "b"
+       }
+      ]
+     },
+     {
+      "name" : "exit",
+      "kind" : "function",
+      "line" : 271,
+      "char" : 17,
+      "storageClass" : [
+       "abstract"
+      ],
+      "deco" : "FZv"
+     },
+     {
+      "name" : "prettyOrigin",
+      "kind" : "function",
+      "line" : 273,
+      "char" : 26,
+      "storageClass" : [
+       "static",
+       "abstract"
+      ],
+      "deco" : "FAyaAyaAyaZAya",
+      "parameters" : [
+       {
+        "name" : "className",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "testName",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 281,
+      "endchar" : 5
+     },
+     {
+      "name" : "prettyOrigin",
+      "kind" : "function",
+      "line" : 283,
+      "char" : 26,
+      "storageClass" : [
+       "static",
+       "abstract"
+      ],
+      "deco" : "FAyaAyaZAya",
+      "parameters" : [
+       {
+        "name" : "testName",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 296,
+      "endchar" : 5
+     },
+     {
+      "name" : "description",
+      "kind" : "function",
+      "line" : 298,
+      "char" : 26,
+      "storageClass" : [
+       "static",
+       "abstract"
+      ],
+      "deco" : "FC6object9ThrowableZAya",
+      "parameters" : [
+       {
+        "name" : "throwable",
+        "deco" : "C6object9Throwable"
+       }
+      ],
+      "endline" : 307,
+      "endchar" : 5
+     }
+    ]
+   },
+   {
+    "name" : "IssueReporter",
+    "kind" : "class",
+    "line" : 310,
+    "char" : 1,
+    "interfaces" : [
+     "TestListener"
+    ],
+    "members" : [
+     {
+      "name" : "Issue",
+      "kind" : "struct",
+      "protection" : "private",
+      "line" : 312,
+      "char" : 13,
+      "members" : [
+       {
+        "name" : "testClass",
+        "kind" : "variable",
+        "line" : 314,
+        "char" : 16,
+        "deco" : "Aya",
+        "offset" : 0
+       },
+       {
+        "name" : "testName",
+        "kind" : "variable",
+        "line" : 315,
+        "char" : 16,
+        "deco" : "Aya",
+        "offset" : 8
+       },
+       {
+        "name" : "phase",
+        "kind" : "variable",
+        "line" : 316,
+        "char" : 16,
+        "deco" : "Aya",
+        "offset" : 16
+       },
+       {
+        "name" : "throwable",
+        "kind" : "variable",
+        "line" : 317,
+        "char" : 19,
+        "deco" : "C6object9Throwable",
+        "originalType" : "Throwable",
+        "offset" : 24
+       }
+      ]
+     },
+     {
+      "name" : "failures",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 320,
+      "char" : 21,
+      "deco" : "AS5dunit9framework13IssueReporter5Issue",
+      "init" : "null",
+      "offset" : 8
+     },
+     {
+      "name" : "errors",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 321,
+      "char" : 21,
+      "deco" : "AS5dunit9framework13IssueReporter5Issue",
+      "init" : "null",
+      "offset" : 16
+     },
+     {
+      "name" : "className",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 322,
+      "char" : 20,
+      "deco" : "Aya",
+      "offset" : 24
+     },
+     {
+      "name" : "testName",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 323,
+      "char" : 20,
+      "deco" : "Aya",
+      "offset" : 32
+     },
+     {
+      "name" : "enterClass",
+      "kind" : "function",
+      "line" : 325,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "className",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 328,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.enterClass"
+      ]
+     },
+     {
+      "name" : "enterTest",
+      "kind" : "function",
+      "line" : 330,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "testName",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 333,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.enterTest"
+      ]
+     },
+     {
+      "name" : "skip",
+      "kind" : "function",
+      "line" : 335,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "reason",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 338,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.skip"
+      ]
+     },
+     {
+      "name" : "addFailure",
+      "kind" : "function",
+      "line" : 340,
+      "char" : 17,
+      "deco" : "FAyaC5dunit9assertion15AssertExceptionZv",
+      "parameters" : [
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "exception",
+        "deco" : "C5dunit9assertion15AssertException"
+       }
+      ],
+      "endline" : 344,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.addFailure"
+      ]
+     },
+     {
+      "name" : "addError",
+      "kind" : "function",
+      "line" : 346,
+      "char" : 17,
+      "deco" : "FAyaC6object9ThrowableZv",
+      "parameters" : [
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "throwable",
+        "deco" : "C6object9Throwable"
+       }
+      ],
+      "endline" : 350,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.addError"
+      ]
+     },
+     {
+      "name" : "exitTest",
+      "kind" : "function",
+      "line" : 352,
+      "char" : 17,
+      "deco" : "FbZv",
+      "parameters" : [
+       {
+        "name" : "success",
+        "deco" : "b"
+       }
+      ],
+      "endline" : 356,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.exitTest"
+      ]
+     },
+     {
+      "name" : "exit",
+      "kind" : "function",
+      "line" : 358,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 398,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.exit"
+      ]
+     }
+    ]
+   },
+   {
+    "name" : "DetailReporter",
+    "kind" : "class",
+    "line" : 401,
+    "char" : 1,
+    "interfaces" : [
+     "TestListener"
+    ],
+    "members" : [
+     {
+      "name" : "testName",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 403,
+      "char" : 20,
+      "deco" : "Aya",
+      "offset" : 8
+     },
+     {
+      "name" : "startTime",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 404,
+      "char" : 26,
+      "deco" : "S4core4time12TickDuration",
+      "offset" : 16
+     },
+     {
+      "name" : "enterClass",
+      "kind" : "function",
+      "line" : 406,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "className",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 409,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.enterClass"
+      ]
+     },
+     {
+      "name" : "enterTest",
+      "kind" : "function",
+      "line" : 411,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "testName",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 415,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.enterTest"
+      ]
+     },
+     {
+      "name" : "skip",
+      "kind" : "function",
+      "line" : 417,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "reason",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 423,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.skip"
+      ]
+     },
+     {
+      "name" : "addFailure",
+      "kind" : "function",
+      "line" : 425,
+      "char" : 17,
+      "deco" : "FAyaC5dunit9assertion15AssertExceptionZv",
+      "parameters" : [
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "exception",
+        "deco" : "C5dunit9assertion15AssertException"
+       }
+      ],
+      "endline" : 430,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.addFailure"
+      ]
+     },
+     {
+      "name" : "addError",
+      "kind" : "function",
+      "line" : 432,
+      "char" : 17,
+      "deco" : "FAyaC6object9ThrowableZv",
+      "parameters" : [
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "throwable",
+        "deco" : "C6object9Throwable"
+       }
+      ],
+      "endline" : 438,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.addError"
+      ]
+     },
+     {
+      "name" : "exitTest",
+      "kind" : "function",
+      "line" : 440,
+      "char" : 17,
+      "deco" : "FbZv",
+      "parameters" : [
+       {
+        "name" : "success",
+        "deco" : "b"
+       }
+      ],
+      "endline" : 449,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.exitTest"
+      ]
+     },
+     {
+      "name" : "exit",
+      "kind" : "function",
+      "line" : 451,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 454,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.exit"
+      ]
+     },
+     {
+      "name" : "indent",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 456,
+      "char" : 20,
+      "deco" : "FAyaAyaZAya",
+      "parameters" : [
+       {
+        "name" : "s",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "indent",
+        "deco" : "Aya",
+        "default" : "\"        \""
+       }
+      ],
+      "endline" : 459,
+      "endchar" : 5
+     }
+    ]
+   },
+   {
+    "name" : "ResultReporter",
+    "kind" : "class",
+    "line" : 462,
+    "char" : 1,
+    "interfaces" : [
+     "TestListener"
+    ],
+    "members" : [
+     {
+      "name" : "tests",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 464,
+      "char" : 18,
+      "deco" : "k",
+      "init" : "0u",
+      "offset" : 8
+     },
+     {
+      "name" : "failures",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 465,
+      "char" : 18,
+      "deco" : "k",
+      "init" : "0u",
+      "offset" : 12
+     },
+     {
+      "name" : "errors",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 466,
+      "char" : 18,
+      "deco" : "k",
+      "init" : "0u",
+      "offset" : 16
+     },
+     {
+      "name" : "skips",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 467,
+      "char" : 18,
+      "deco" : "k",
+      "init" : "0u",
+      "offset" : 20
+     },
+     {
+      "name" : "enterClass",
+      "kind" : "function",
+      "line" : 469,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "className",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 472,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.enterClass"
+      ]
+     },
+     {
+      "name" : "enterTest",
+      "kind" : "function",
+      "line" : 474,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "testName",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 477,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.enterTest"
+      ]
+     },
+     {
+      "name" : "skip",
+      "kind" : "function",
+      "line" : 479,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "reason",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 482,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.skip"
+      ]
+     },
+     {
+      "name" : "addFailure",
+      "kind" : "function",
+      "line" : 484,
+      "char" : 17,
+      "deco" : "FAyaC5dunit9assertion15AssertExceptionZv",
+      "parameters" : [
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "exception",
+        "deco" : "C5dunit9assertion15AssertException"
+       }
+      ],
+      "endline" : 487,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.addFailure"
+      ]
+     },
+     {
+      "name" : "addError",
+      "kind" : "function",
+      "line" : 489,
+      "char" : 17,
+      "deco" : "FAyaC6object9ThrowableZv",
+      "parameters" : [
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "throwable",
+        "deco" : "C6object9Throwable"
+       }
+      ],
+      "endline" : 492,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.addError"
+      ]
+     },
+     {
+      "name" : "exitTest",
+      "kind" : "function",
+      "line" : 494,
+      "char" : 17,
+      "deco" : "FbZv",
+      "parameters" : [
+       {
+        "name" : "success",
+        "deco" : "b"
+       }
+      ],
+      "endline" : 497,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.exitTest"
+      ]
+     },
+     {
+      "name" : "exit",
+      "kind" : "function",
+      "line" : 499,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 515,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.exit"
+      ]
+     }
+    ]
+   },
+   {
+    "name" : "XmlReporter",
+    "kind" : "class",
+    "line" : 518,
+    "char" : 1,
+    "interfaces" : [
+     "TestListener"
+    ],
+    "members" : [
+     {
+      "name" : "std.xml",
+      "kind" : "import",
+      "line" : 520,
+      "char" : 12,
+      "protection" : "private"
+     },
+     {
+      "name" : "fileName",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 522,
+      "char" : 20,
+      "deco" : "Aya",
+      "offset" : 8
+     },
+     {
+      "name" : "document",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 523,
+      "char" : 22,
+      "deco" : "C3std3xml8Document",
+      "originalType" : "Document",
+      "offset" : 16
+     },
+     {
+      "name" : "testSuite",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 524,
+      "char" : 21,
+      "deco" : "C3std3xml7Element",
+      "originalType" : "Element",
+      "offset" : 20
+     },
+     {
+      "name" : "testCase",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 525,
+      "char" : 21,
+      "deco" : "C3std3xml7Element",
+      "originalType" : "Element",
+      "offset" : 24
+     },
+     {
+      "name" : "className",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 526,
+      "char" : 20,
+      "deco" : "Aya",
+      "offset" : 28
+     },
+     {
+      "name" : "startTime",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 527,
+      "char" : 26,
+      "deco" : "S4core4time12TickDuration",
+      "offset" : 40
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 529,
+      "char" : 12,
+      "deco" : "FAyaZC5dunit9framework11XmlReporter",
+      "originalType" : "(string fileName)",
+      "parameters" : [
+       {
+        "name" : "fileName",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 536,
+      "endchar" : 5
+     },
+     {
+      "name" : "enterClass",
+      "kind" : "function",
+      "line" : 538,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "className",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 541,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.enterClass"
+      ]
+     },
+     {
+      "name" : "enterTest",
+      "kind" : "function",
+      "line" : 543,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "testName",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 550,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.enterTest"
+      ]
+     },
+     {
+      "name" : "skip",
+      "kind" : "function",
+      "line" : 552,
+      "char" : 17,
+      "deco" : "FAyaZv",
+      "parameters" : [
+       {
+        "name" : "reason",
+        "deco" : "Aya"
+       }
+      ],
+      "endline" : 562,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.skip"
+      ]
+     },
+     {
+      "name" : "addFailure",
+      "kind" : "function",
+      "line" : 564,
+      "char" : 17,
+      "deco" : "FAyaC5dunit9assertion15AssertExceptionZv",
+      "parameters" : [
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "exception",
+        "deco" : "C5dunit9assertion15AssertException"
+       }
+      ],
+      "endline" : 576,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.addFailure"
+      ]
+     },
+     {
+      "name" : "addError",
+      "kind" : "function",
+      "line" : 578,
+      "char" : 17,
+      "deco" : "FAyaC6object9ThrowableZv",
+      "parameters" : [
+       {
+        "name" : "phase",
+        "deco" : "Aya"
+       },
+       {
+        "name" : "throwable",
+        "deco" : "C6object9Throwable"
+       }
+      ],
+      "endline" : 590,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.addError"
+      ]
+     },
+     {
+      "name" : "exitTest",
+      "kind" : "function",
+      "line" : 592,
+      "char" : 17,
+      "deco" : "FbZv",
+      "parameters" : [
+       {
+        "name" : "success",
+        "deco" : "b"
+       }
+      ],
+      "endline" : 597,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.exitTest"
+      ]
+     },
+     {
+      "name" : "exit",
+      "kind" : "function",
+      "line" : 599,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 606,
+      "endchar" : 5,
+      "overrides" : [
+       "dunit.framework.TestListener.exit"
+      ]
+     }
+    ]
+   },
+   {
+    "kind" : "template",
+    "line" : 612,
+    "char" : 7,
+    "name" : "UnitTest",
+    "parameters" : [],
+    "members" : [
+     {
+      "name" : "_staticCtor1",
+      "kind" : "function",
+      "line" : 614,
+      "char" : 13,
+      "storageClass" : [
+       "static"
+      ],
+      "endline" : 671,
+      "endchar" : 5
+     },
+     {
+      "name" : "_choice",
+      "kind" : "function",
+      "line" : 673,
+      "char" : 27,
+      "type" : "string(const string[] memberFunctions)",
+      "parameters" : [
+       {
+        "name" : "memberFunctions",
+        "type" : "string[]",
+        "storageClass" : [
+         "const"
+        ]
+       }
+      ],
+      "endline" : 682,
+      "endchar" : 5
+     },
+     {
+      "name" : "_sequence",
+      "kind" : "function",
+      "line" : 684,
+      "char" : 27,
+      "type" : "string(const string[] memberFunctions)",
+      "parameters" : [
+       {
+        "name" : "memberFunctions",
+        "type" : "string[]",
+        "storageClass" : [
+         "const"
+        ]
+       }
+      ],
+      "endline" : 691,
+      "endchar" : 5
+     },
+     {
+      "kind" : "template",
+      "line" : 693,
+      "char" : 13,
+      "name" : "_memberFunctions",
+      "parameters" : [
+       {
+        "name" : "T",
+        "kind" : "alias"
+       },
+       {
+        "name" : "attribute",
+        "kind" : "type"
+       },
+       {
+        "name" : "names",
+        "kind" : "tuple"
+       }
+      ],
+      "members" : []
+     },
+     {
+      "kind" : "template",
+      "line" : 705,
+      "char" : 13,
+      "name" : "_hasAttribute",
+      "parameters" : [
+       {
+        "name" : "T",
+        "kind" : "alias"
+       },
+       {
+        "name" : "name",
+        "kind" : "value",
+        "type" : "string"
+       },
+       {
+        "name" : "attribute",
+        "kind" : "type"
+       }
+      ],
+      "members" : [
+       {
+        "name" : "member",
+        "kind" : "alias",
+        "line" : 707,
+        "char" : 56,
+        "type" : "TypeTuple!(__traits(getMember, T, name))"
+       },
+       {
+        "name" : "attributes",
+        "kind" : "alias",
+        "line" : 708,
+        "char" : 59,
+        "type" : "TypeTuple!(__traits(getAttributes, member))"
+       },
+       {
+        "name" : "_hasAttribute",
+        "kind" : "variable",
+        "line" : 710,
+        "char" : 14,
+        "storageClass" : [
+         "enum"
+        ],
+        "init" : "staticIndexOf!(attribute, attributes) != -1"
+       }
+      ]
+     },
+     {
+      "kind" : "template",
+      "line" : 713,
+      "char" : 13,
+      "name" : "_annotations",
+      "parameters" : [
+       {
+        "name" : "T",
+        "kind" : "alias"
+       },
+       {
+        "name" : "attribute",
+        "kind" : "type"
+       },
+       {
+        "name" : "names",
+        "kind" : "tuple"
+       }
+      ],
+      "members" : []
+     },
+     {
+      "kind" : "template",
+      "line" : 734,
+      "char" : 13,
+      "name" : "_indexOfValue",
+      "parameters" : [
+       {
+        "name" : "attribute",
+        "kind" : "type"
+       },
+       {
+        "name" : "T",
+        "kind" : "tuple"
+       }
+      ],
+      "members" : []
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "name" : "dunit",
+  "kind" : "module",
+  "file" : "dunit\\package.d",
+  "members" : [
+   {
+    "name" : "dunit.assertion",
+    "kind" : "import",
+    "line" : 3,
+    "char" : 15
+   },
+   {
+    "name" : "dunit.attributes",
+    "kind" : "import",
+    "line" : 4,
+    "char" : 15
+   },
+   {
+    "name" : "dunit.framework",
+    "kind" : "import",
+    "line" : 5,
+    "char" : 15
+   }
+  ]
+ },
+ {
+  "name" : "example",
+  "kind" : "module",
+  "file" : "example.d",
+  "members" : [
+   {
+    "name" : "dunit",
+    "kind" : "import",
+    "line" : 11,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "core.thread",
+    "kind" : "import",
+    "line" : 12,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "core.time",
+    "kind" : "import",
+    "line" : 13,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "std.stdio",
+    "kind" : "import",
+    "line" : 14,
+    "char" : 8,
+    "protection" : "private"
+   },
+   {
+    "name" : "Test",
+    "kind" : "class",
+    "line" : 19,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "UnitTest!()",
+      "kind" : "mixin",
+      "line" : 21,
+      "char" : 5
+     },
+     {
+      "name" : "assertEqualsFailure",
+      "kind" : "function",
+      "line" : 24,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 30,
+      "endchar" : 5
+     },
+     {
+      "name" : "assertArrayEqualsFailure",
+      "kind" : "function",
+      "line" : 33,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 39,
+      "endchar" : 5
+     },
+     {
+      "name" : "assertAssocArrayEqualsFailure",
+      "kind" : "function",
+      "line" : 42,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 48,
+      "endchar" : 5
+     },
+     {
+      "name" : "assertOpFailure",
+      "kind" : "function",
+      "line" : 51,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 54,
+      "endchar" : 5
+     }
+    ]
+   },
+   {
+    "name" : "TestFixture",
+    "kind" : "class",
+    "line" : 63,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "UnitTest!()",
+      "kind" : "mixin",
+      "line" : 65,
+      "char" : 5
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 67,
+      "char" : 12,
+      "deco" : "FZC7example11TestFixture",
+      "originalType" : "()",
+      "endline" : 70,
+      "endchar" : 5
+     },
+     {
+      "name" : "setUpClass",
+      "kind" : "function",
+      "line" : 73,
+      "char" : 24,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FZv",
+      "endline" : 76,
+      "endchar" : 5
+     },
+     {
+      "name" : "tearDownClass",
+      "kind" : "function",
+      "line" : 79,
+      "char" : 24,
+      "storageClass" : [
+       "static"
+      ],
+      "deco" : "FZv",
+      "endline" : 82,
+      "endchar" : 5
+     },
+     {
+      "name" : "setUp",
+      "kind" : "function",
+      "line" : 85,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 88,
+      "endchar" : 5
+     },
+     {
+      "name" : "tearDown",
+      "kind" : "function",
+      "line" : 91,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 94,
+      "endchar" : 5
+     },
+     {
+      "name" : "test1",
+      "kind" : "function",
+      "line" : 97,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 100,
+      "endchar" : 5
+     },
+     {
+      "name" : "test2",
+      "kind" : "function",
+      "line" : 103,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 106,
+      "endchar" : 5
+     }
+    ]
+   },
+   {
+    "name" : "TestReuse",
+    "kind" : "class",
+    "line" : 112,
+    "char" : 1,
+    "base" : "TestFixture",
+    "members" : [
+     {
+      "name" : "UnitTest!()",
+      "kind" : "mixin",
+      "line" : 114,
+      "char" : 5
+     },
+     {
+      "name" : "setUp",
+      "kind" : "function",
+      "line" : 117,
+      "char" : 26,
+      "storageClass" : [
+       "override"
+      ],
+      "deco" : "FZv",
+      "endline" : 120,
+      "endchar" : 5,
+      "overrides" : [
+       "example.TestFixture.setUp"
+      ]
+     },
+     {
+      "name" : "this",
+      "kind" : "constructor",
+      "line" : 112,
+      "char" : 1,
+      "deco" : "FZC7example9TestReuse",
+      "originalType" : "()"
+     }
+    ]
+   },
+   {
+    "name" : "TestingThisAndThat",
+    "kind" : "class",
+    "line" : 126,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "UnitTest!()",
+      "kind" : "mixin",
+      "line" : 128,
+      "char" : 5
+     },
+     {
+      "name" : "testResult",
+      "kind" : "function",
+      "line" : 132,
+      "char" : 17,
+      "deco" : "FbZv",
+      "parameters" : [
+       {
+        "name" : "actual",
+        "deco" : "b",
+        "default" : "true"
+       }
+      ],
+      "endline" : 135,
+      "endchar" : 5
+     },
+     {
+      "name" : "success",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 139,
+      "char" : 18,
+      "deco" : "FZv",
+      "endline" : 142,
+      "endchar" : 5
+     },
+     {
+      "name" : "failure",
+      "kind" : "function",
+      "line" : 147,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 150,
+      "endchar" : 5
+     },
+     {
+      "name" : "error",
+      "kind" : "function",
+      "line" : 154,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 157,
+      "endchar" : 5
+     }
+    ]
+   },
+   {
+    "name" : "TestingAsynchronousCode",
+    "kind" : "class",
+    "line" : 163,
+    "char" : 1,
+    "members" : [
+     {
+      "name" : "UnitTest!()",
+      "kind" : "mixin",
+      "line" : 165,
+      "char" : 5
+     },
+     {
+      "name" : "thread",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 167,
+      "char" : 20,
+      "deco" : "C4core6thread6Thread",
+      "originalType" : "Thread",
+      "offset" : 8
+     },
+     {
+      "name" : "done",
+      "kind" : "variable",
+      "protection" : "private",
+      "line" : 169,
+      "char" : 18,
+      "deco" : "b",
+      "offset" : 12
+     },
+     {
+      "name" : "setUp",
+      "kind" : "function",
+      "line" : 172,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 176,
+      "endchar" : 5
+     },
+     {
+      "name" : "tearDown",
+      "kind" : "function",
+      "line" : 179,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 182,
+      "endchar" : 5
+     },
+     {
+      "name" : "threadFunction",
+      "kind" : "function",
+      "protection" : "private",
+      "line" : 184,
+      "char" : 18,
+      "deco" : "FZv",
+      "endline" : 188,
+      "endchar" : 5
+     },
+     {
+      "name" : "test",
+      "kind" : "function",
+      "line" : 191,
+      "char" : 17,
+      "deco" : "FZv",
+      "endline" : 198,
+      "endchar" : 5
+     }
+    ]
+   },
+   {
+    "name" : "Main!()",
+    "kind" : "mixin",
+    "line" : 202,
+    "char" : 1
+   }
+  ]
+ }
+]
